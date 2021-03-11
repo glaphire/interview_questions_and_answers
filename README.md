@@ -1,29 +1,26 @@
 # Interview questions and answers
 
-Questions that I was asked on interview on Middle/Senior PHP developer position in 2020+ year.
-Some topics were not asked directly but I wanted to add more deep answer.
+Questions and topics that I was asked on interviews on Middle/Senior PHP developer position in 2020+ year.
 
-* [PHP](https://www.google.com)
+* [PHP](https://github.com/glaphire/interview_questions_and_answers/tree/main/src/php)
 
-* [OOP & OOD](https://www.google.com)
+* [OOP & OOD](https://github.com/glaphire/interview_questions_and_answers/tree/main/src/oop)
 
-* [Testing]()
+* [Testing](https://github.com/glaphire/interview_questions_and_answers/tree/main/src/testing)
 
-* [MySQL]()
+* [MySQL](https://github.com/glaphire/interview_questions_and_answers/tree/main/src/mysql)
 
-* [Symfony]()
+* [Symfony](https://github.com/glaphire/interview_questions_and_answers/tree/main/src/symfony)
 
-* [Doctrine]()
+* [Doctrine](https://github.com/glaphire/interview_questions_and_answers/tree/main/src/doctrine)
 
-* [Symfony]()
+* [Redis](https://github.com/glaphire/interview_questions_and_answers/tree/main/src/redis)
 
-* [Redis]()
+* [RabbitMQ](https://github.com/glaphire/interview_questions_and_answers/tree/main/src/rabbitmq)
 
-* [RabbitMQ]()
+* [Web-development & System design (general)](https://github.com/glaphire/interview_questions_and_answers/tree/main/src/webDevelopment)
 
-* [Web-development & System design (general)]()
-
-* [Highload]()
+* [Highload](https://github.com/glaphire/interview_questions_and_answers/tree/main/src/highload)
 
 
-Notice: questions and answers may be in english or in russian (hope to translate all to english)
+*Notice:* questions and answers may be in russian (hope to translate in english after some time)
