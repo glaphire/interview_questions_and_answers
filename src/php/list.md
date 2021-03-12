@@ -1,6 +1,6 @@
 # PHP questions
 
-##Language features
+## Language features
 - Data types in PHP. Describe Resource and Callable types
 - this VS self, self VS static, parent VS self
 - Magic constants list. Does magic constant's value depend on the place where it is called
@@ -17,20 +17,21 @@
 - Magic methods
 - Late static bindings
 
-##Traits
+## Traits
 - Traits - how add them. Inheriting and Instantiating traits
 - How traits are included on low level
 
-##PHP versions
+## PHP versions
 - New features in PHP7 (main differences from PHP5)
 - New features in PHP7.4
 - New features in PHP 8.0
 
-##Tools
+## Tools
 - Composer - purpose and possibilities
 
 ------
-##Tricky questions
+
+## Tricky questions
 1. Here is an array with keys 0, 1, 2, 3 and "Hello". What will be the key for the next value?
 2. There are classes A, B, C with some restrictions:
     - A with a public constructor
