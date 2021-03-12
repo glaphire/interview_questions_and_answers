@@ -1,1 +1,18 @@
-# Oop questions
+# OOP questions
+- OOP main definitions
+- Polymorphism vs inheritance
+- Design patterns - main types
+- List of design patterns 
+- Design patterns used in popular php frameworks
+- Example of pattern usage in your personal projects
+- Positive examples of Singleton pattern usage
+- Describe patterns
+    - Singleton
+    - Factory
+    - Adapter
+    - Decorator
+    - Proxy
+    - Observer
+- SOLID principles. Usage examples
+- Active Record pattern
+- Active Record VS Data Mapper
