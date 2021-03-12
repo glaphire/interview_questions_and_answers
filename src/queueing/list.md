@@ -1,1 +1,1 @@
-# Rabbitmq questions
+# Queueing and Message Brokers questions
