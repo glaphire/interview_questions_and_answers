@@ -14,11 +14,11 @@ Questions and topics that I was asked on interviews on Middle/Senior PHP develop
 
 * [Doctrine](https://github.com/glaphire/interview_questions_and_answers/tree/main/src/doctrine/list.md)
 
-* [Redis](https://github.com/glaphire/interview_questions_and_answers/tree/main/src/redis/list.md)
+* [Caching](https://github.com/glaphire/interview_questions_and_answers/tree/main/src/caching/list.md)
 
-* [RabbitMQ](https://github.com/glaphire/interview_questions_and_answers/tree/main/src/rabbitmq/list.md)
+* [Queueing](https://github.com/glaphire/interview_questions_and_answers/tree/main/src/queueing/list.md)
 
-* [Web-development & System design (general)](https://github.com/glaphire/interview_questions_and_answers/tree/main/src/webDevelopment/list.md)
+* [Web-development & System design (general)](https://github.com/glaphire/interview_questions_and_answers/tree/main/src/general_questions/list.md)
 
 * [Highload](https://github.com/glaphire/interview_questions_and_answers/tree/main/src/highload/list.md)
 
