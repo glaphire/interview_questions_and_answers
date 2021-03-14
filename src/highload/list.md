@@ -6,3 +6,5 @@
 - ANALYZE VS EXPLAIN in MySQL
 - Tools for analyzing problems on database side of an application
 - How to narrow problems on php side of an application
+- Sharding. Vertical vs Horizontal sharding
+- Partitioning

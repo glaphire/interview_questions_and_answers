@@ -1,4 +1,4 @@
-# OOP questions
+# OOP questions 
 - OOP main definitions
 - Polymorphism vs inheritance
 - Design patterns - main types
@@ -16,3 +16,5 @@
 - SOLID principles. Usage examples
 - Active Record pattern
 - Active Record VS Data Mapper
+- Composition VS Aggregation
+- IoC (DiC)

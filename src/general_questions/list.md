@@ -11,3 +11,4 @@
 - REST API VS JSON RPC
 - Docker (docker-compose)
 - Domain Driven Design (main concepts)
+- Concurrency VS Parallelism
