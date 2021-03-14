@@ -2,7 +2,7 @@
 Authentication - verification process of a user's identity.
 
 ## Registration flow (Web flow)
-1. User opens registration page in a browser.
+1. User opens registration page in a browser with a form.
 2. User fills required fields in a form: usually identification field (username/email etc.) and password.
 3. User clicks 'submit'.
 4. Browser sends HTTP POST request to the server with plain form's data (and CSRF token, if implemented).
@@ -21,4 +21,16 @@ Authentication - verification process of a user's identity.
 6. Server sends HTTP response with status 200 with successful registration message. Usually, it redirects to a login page.
 
 ## Login flow (Web flow)
-//TODO
+1. User opens login page in a browser with form.
+2. User fills identification field (username/email etc.) and plain password, clicks submit.
+3. Browser sends HTTP POST request with form data to the server.
+4. Server receives and parses HTTP request, gets plain identification field and password.
+5. Server makes request to the database, checks if user with this identification field exists.
+    1. If user doesn't exist, server sends HTTP 400 response with an error.
+    2. If user exists, server hashes password and compares with user's password in the database.
+    3. If password hashes don't match, server sends HTTP 400 response with an error.
+6. After successful check server starts new Session. Session token is saved in database in pair with user identifier.
+7. Server sends response to browser with a "Set-cookie" header with session id. Browser saves it.
+On each request browser adds 'Cookie' header and server compares session id with cookie id.
+//TODO: read about session-based authentication and cookie-based authorization and describe here
+    
