@@ -1,6 +1,6 @@
 # General questions about web development 
 
-- [How authentication works](https://github.com/glaphire/interview_questions_and_answers/tree/main/src/general_questions/answers)
+- [How authentication works](https://github.com/glaphire/interview_questions_and_answers/blob/main/src/general_questions/answers/how_authentication_works.md)
 - How authorization works
 - HTTP protocol: request and response structure
 - OWASP Top 10
