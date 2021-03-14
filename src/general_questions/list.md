@@ -1,5 +1,6 @@
 # General questions about web development 
 
+- How authentication works
 - How authorization works
 - HTTP protocol: request and response structure
 - OWASP Top 10
