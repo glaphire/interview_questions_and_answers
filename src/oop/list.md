@@ -18,3 +18,8 @@
 - Active Record VS Data Mapper
 - Composition VS Aggregation
 - IoC (DiC)
+
+#Software design
+- DDD
+- CQRS
+- Event Sourcing
