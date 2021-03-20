@@ -7,9 +7,17 @@
     4. Request instance is created from superglobal variables.
     The data from request query and/or body are transferred into \Symfony\Component\HttpFoundation\InputBag instance.
     5. Kernel is handling request instance. Steps inside \Symfony\Component\HttpKernel\Kernel::handle:
-        1. ...
-        2. Container is initialized.
-        3. Bundles are initialized.
+        1. Service that are allowed to be reset are reset (if request stack is not empty and kernel was previously booted).
+        2. Bundles are initialized (from list in config/bundles.php)
+        3. Container is initialized.
+            1. Cached container is created on a first call or got from from cache on the next calls.
+            2. Container is configured and compiled (if not cached):
+                1. Internal settings are set
+                2. MethodMap is set (to work with EventDispatcher, HttpKernel, RequestStack and Router).
+                2. 'service id' => 'service class' map is created and set into the container
+                3. service aliases are set.
+                4. Internal classes/interfaces of Symfony core are added into the container.
+                5. CompilerPass is called to add additional info if some services need to be specifically compiled.
         4. Bundles are set into container.
     
 ![Image example](Image-link.jpg)
