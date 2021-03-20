@@ -35,7 +35,7 @@
 				    4. Request is moved from the RequestStack (because it was successfully processed)
 				    5. Response is returned to the handle method
 	6. HTTP response is sent to the client
-	7. 'kernel.terminate' event is fired.
+	7. 'kernel.terminate' event is fired. [Purpose of this event](https://symfony.com/doc/current/components/http_kernel.html#the-kernel-terminate-event)
 				    
 				     
 				        
