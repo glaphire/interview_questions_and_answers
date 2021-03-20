@@ -14,11 +14,31 @@
             2. Container is configured and compiled (if not cached):
                 1. Internal settings are set
                 2. MethodMap is set (to work with EventDispatcher, HttpKernel, RequestStack and Router).
-                2. 'service id' => 'service class' map is created and set into the container
-                3. service aliases are set.
-                4. Internal classes/interfaces of Symfony core are added into the container.
-                5. CompilerPass is called to add additional info if some services need to be specifically compiled.
+                3. 'service id' => 'service class' map is created and set into the container
+                4. Service aliases are set.
+                5. Internal classes/interfaces of Symfony core are added into the container.
+                6. CompilerPass is called to add additional info if some services need to be specifically compiled.
+                7. Data from the request is set to the container (TODO: check order in vendor code)
         4. Bundles are set into container.
+        5. Each request in the request stack is handled:
+            1. \Symfony\Component\HttpKernel\HttpKernel::handleRaw is called:
+                1. Request is pushed to the request stack
+                2. 'kernel.request' event with Request object is fired (dispatched)
+				3. Controller is resolved via ControllerResolver
+				4. 'kernel.controller' event is dispatched
+				5. Controller arguments are resolved
+				6. 'kernel.controller_arguments' event is dispatched
+				7. Response is got from processed controller action
+				    1. If response is not the Response class instance, 'kernel.view' is fired and view is rendered
+				    2. If response is a Response instance, 'kernel.response' event is fired.
+				    3. 'kernel.finish_request' event is fired
+				    4. Request is moved from the RequestStack (because it was successfully processed)
+				    5. Response is returned to the handle method
+	6. HTTP response is sent to the client
+	7. 'kernel.terminate' event is fired.
+				    
+				     
+				        
     
 ![Image example](Image-link.jpg)
 
@@ -117,4 +137,62 @@ public function handle(Request $request, int $type = HttpKernelInterface::MASTER
         $this->booted = true;
     }
 
+```
+
+```php
+<?php
+//symfony/http-kernel/kernel.php
+private function handleRaw(Request $request, int $type = self::MASTER_REQUEST): Response
+    {
+        $this->requestStack->push($request);
+
+        // request
+        $event = new RequestEvent($this, $request, $type);
+        $this->dispatcher->dispatch($event, KernelEvents::REQUEST);
+
+        if ($event->hasResponse()) {
+            return $this->filterResponse($event->getResponse(), $request, $type);
+        }
+
+        // load controller
+        if (false === $controller = $this->resolver->getController($request)) {
+            throw new NotFoundHttpException(sprintf('Unable to find the controller for path "%s". The route is wrongly configured.', $request->getPathInfo()));
+        }
+
+        $event = new ControllerEvent($this, $controller, $request, $type);
+        $this->dispatcher->dispatch($event, KernelEvents::CONTROLLER);
+        $controller = $event->getController();
+
+        // controller arguments
+        $arguments = $this->argumentResolver->getArguments($request, $controller);
+
+        $event = new ControllerArgumentsEvent($this, $controller, $arguments, $request, $type);
+        $this->dispatcher->dispatch($event, KernelEvents::CONTROLLER_ARGUMENTS);
+        $controller = $event->getController();
+        $arguments = $event->getArguments();
+
+        // call controller
+        $response = $controller(...$arguments);
+
+        // view
+        if (!$response instanceof Response) {
+            $event = new ViewEvent($this, $request, $type, $response);
+            $this->dispatcher->dispatch($event, KernelEvents::VIEW);
+
+            if ($event->hasResponse()) {
+                $response = $event->getResponse();
+            } else {
+                $msg = sprintf('The controller must return a "Symfony\Component\HttpFoundation\Response" object but it returned %s.', $this->varToString($response));
+
+                // the user may have forgotten to return something
+                if (null === $response) {
+                    $msg .= ' Did you forget to add a return statement somewhere in your controller?';
+                }
+
+                throw new ControllerDoesNotReturnResponseException($msg, $controller, __FILE__, __LINE__ - 17);
+            }
+        }
+
+        return $this->filterResponse($response, $request, $type);
+    }
 ```
