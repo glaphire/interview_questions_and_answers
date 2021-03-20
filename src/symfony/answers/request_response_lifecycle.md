@@ -40,7 +40,7 @@
 				     
 				        
     
-![Image example](Image-link.jpg)
+![Request lifecycle from SF documentation](https://github.com/glaphire/interview_questions_and_answers/blob/main/src/symfony/answers/symfony_request_lifecycle.png)
 
 Code fragments from Symfony 5.1 
 
