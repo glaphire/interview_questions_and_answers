@@ -24,8 +24,9 @@
         5. Each request in the request stack is handled:
             1. \Symfony\Component\HttpKernel\HttpKernel::handleRaw is called:
                 1. Request is pushed to the request stack
-                2. 'kernel.request' event with Request object is fired (dispatched)
-				3. Controller is resolved via ControllerResolver
+                2. 'kernel.request' event with Request object is fired (dispatched).
+                RouteListener is subscribed to this event and resolving route and route parameters.
+				3. Controller is resolved via ControllerResolver.
 				4. 'kernel.controller' event is dispatched
 				5. Controller arguments are resolved
 				6. 'kernel.controller_arguments' event is dispatched
