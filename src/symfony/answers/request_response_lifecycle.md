@@ -17,8 +17,9 @@
                 3. 'service id' => 'service class' map is created and set into the container
                 4. Service aliases are set.
                 5. Internal classes/interfaces of Symfony core are added into the container.
-                6. CompilerPass is called to add additional info if some services need to be specifically compiled.
-                7. Data from the request is set to the container (TODO: check order in vendor code)
+                6. EventDispatcher is instantiated and all event listeners are added.
+                7. CompilerPass is called to add additional info if some services need to be specifically compiled.
+                8. Data from the request is set to the container (TODO: check order in vendor code)
         4. Bundles are set into container.
         5. Each request in the request stack is handled:
             1. \Symfony\Component\HttpKernel\HttpKernel::handleRaw is called:
