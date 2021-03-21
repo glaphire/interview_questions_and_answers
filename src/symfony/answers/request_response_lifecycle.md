@@ -25,7 +25,7 @@
             1. \Symfony\Component\HttpKernel\HttpKernel::handleRaw is called:
                 1. Request is pushed to the request stack
                 2. 'kernel.request' event with Request object is fired (dispatched).
-                RouteListener is subscribed to this event and resolving route and route parameters.
+                RouteListener is subscribed to this event and adds **_controller**, **_route** and **_route_params** parameters to the Request Object.
 				3. Controller is resolved via ControllerResolver.
 				4. 'kernel.controller' event is dispatched
 				5. Controller arguments are resolved
