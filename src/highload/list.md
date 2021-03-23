@@ -8,3 +8,4 @@
 - How to narrow problems on php side of an application
 - Sharding. Vertical vs Horizontal sharding
 - Partitioning
+- How to deal with deadlocks in MySQL
