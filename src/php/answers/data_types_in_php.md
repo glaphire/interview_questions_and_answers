@@ -167,6 +167,7 @@ $new_numbers = array_map($double, $numbers);
 __Notes__:
 
 * Arrays
+
 	The key can either be an **int** or a **string**. The value can be of any type.
 
 	Additionally the following key casts will occur:
@@ -182,6 +183,7 @@ __Notes__:
 	Doing so will result in a warning: Illegal offset type.
 	
 * Objects
+
 	- If an object is converted to an object, it is not modified. 
 	- If a value of any other type is converted to an object, 
 	a new instance of the stdClass built-in class is created. 
@@ -192,6 +194,7 @@ __Notes__:
 	- For any other value, a member variable named scalar will contain the value.
 	
 * Iterables
+
 	Iterable is a pseudo-type introduced in PHP 7.1. 
 	It accepts any array or object implementing the Traversable interface. 
 	Both of these types are iterable using foreach and can be used with yield from within a generator.
@@ -200,6 +203,7 @@ __Notes__:
 	- as a return type
 	
 * Callables
+
 	Callbacks can be denoted by the callable type declaration.
     
     Some functions like call_user_func() or usort() 
@@ -216,6 +220,7 @@ __Notes__:
 __Notes__:
 
 * Resources
+
 	A resource is a special variable, holding a reference to an external resource. 
 	Resources are created and used by special functions 
 	(e.g. function that gets a network connection or opens a file). 
@@ -230,6 +235,7 @@ __Notes__:
     They are not destroyed by the garbage collector.** 
     
 * Null
+
 	The special null value represents a variable with no value. 
 	**null** is the only possible value of type null.
     
