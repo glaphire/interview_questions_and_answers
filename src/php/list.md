@@ -1,7 +1,7 @@
 # PHP questions
 
 ## Language features
-- Data types in PHP. Describe Resource and Callable types
+- [Data types in PHP. Describe Resource and Callable types](https://github.com/glaphire/interview_questions_and_answers/blob/main/src/php/answers/data_types_in_php.md)
 - this VS self, self VS static, parent VS self
 - Magic constants list. Does magic constant's value depend on the place where it is called
 - Generators usage examples
@@ -16,6 +16,7 @@
 - Interfaces. Inheritance of interfaces
 - Magic methods
 - Late static bindings
+- Persistent Database Connections
 
 ## Traits
 - Traits - how add them. Inheriting and Instantiating traits
