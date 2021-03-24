@@ -210,3 +210,30 @@ __Notes__:
     - Apart from common user-defined function, 
     anonymous functions and arrow functions can also be passed to a callback parameter.
     - any object implementing __invoke() can also be passed to a callback parameter.
+    
+## Special types
+
+__Notes__:
+
+* Resources
+	A resource is a special variable, holding a reference to an external resource. 
+	Resources are created and used by special functions 
+	(e.g. function that gets a network connection or opens a file). 
+	
+	[List of functions that return a resource](https://www.php.net/manual/en/resource.php)
+	
+	Thanks to the reference-counting system being part of Zend Engine, 
+	a resource with no more references to it is detected automatically, 
+	and it is freed by the garbage collector. 
+	For this reason, it is rarely necessary to free the memory manually.
+    **Note: Persistent database links are an exception to this rule.
+    They are not destroyed by the garbage collector.** 
+    
+* Null
+	The special null value represents a variable with no value. 
+	**null** is the only possible value of type null.
+    
+    A variable is considered to be null if:
+    - it has been assigned the constant **null**.
+    - it has not been set to any value yet.
+    - it has been unset().
