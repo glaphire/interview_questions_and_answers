@@ -11,7 +11,7 @@ __Scalar types__:
 __Compound types__:
 - array
 - object
-- iterables
+- iterables (pseudo-type)
 - callback/callables
 
 __Special types__:
@@ -99,7 +99,68 @@ echo $obj->scalar;  // outputs 'ciao'
 
 //or create class and instantiate it
 
-///
+///iterables
+function foo(iterable $iterable) {
+    foreach ($iterable as $value) {
+        // ...
+    } 
+}
+
+///callables
+
+// An example callback function
+function my_callback_function() {
+    echo 'hello world!';
+}
+
+// An example callback method
+class MyClass {
+    static function myCallbackMethod() {
+        echo 'Hello World!';
+    }
+}
+
+// Type 1: Simple callback
+call_user_func('my_callback_function');
+
+// Type 2: Static class method call
+call_user_func(array('MyClass', 'myCallbackMethod'));
+
+// Type 3: Object method call
+$obj = new MyClass();
+call_user_func(array($obj, 'myCallbackMethod'));
+
+// Type 4: Static class method call
+call_user_func('MyClass::myCallbackMethod');
+
+// Type 5: Relative static class method call
+class A {
+    public static function who() {
+        echo "A\n";
+    }
+}
+
+class B extends A {
+    public static function who() {
+        echo "B\n";
+    }
+}
+
+call_user_func(array('B', 'parent::who')); // A
+
+// Example with closure
+$double = function($a) {
+    return $a * 2;
+};
+
+// This is our range of numbers
+$numbers = range(1, 5);
+
+// Use the closure as a callback here to
+// double the size of each element in our
+// range
+$new_numbers = array_map($double, $numbers);
+
 
 ```
 
@@ -129,3 +190,23 @@ __Notes__:
 	by keys and corresponding values. 
 	- Note that in this case before PHP 7.2.0 numeric keys have been inaccessible unless iterated.
 	- For any other value, a member variable named scalar will contain the value.
+	
+* Iterables
+	Iterable is a pseudo-type introduced in PHP 7.1. 
+	It accepts any array or object implementing the Traversable interface. 
+	Both of these types are iterable using foreach and can be used with yield from within a generator.
+	Iterable can be:
+	- as a parameter type
+	- as a return type
+	
+* Callables
+	Callbacks can be denoted by the callable type declaration.
+    
+    Some functions like call_user_func() or usort() 
+    accept user-defined callback functions as a parameter. 
+    Callback functions can not only be simple functions, 
+    but also object methods, including static class methods.
+    
+    - Apart from common user-defined function, 
+    anonymous functions and arrow functions can also be passed to a callback parameter.
+    - any object implementing __invoke() can also be passed to a callback parameter.
