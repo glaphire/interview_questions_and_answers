@@ -70,3 +70,62 @@ __Notes__:
 	- the special type NULL (including unset variables)
 	- SimpleXML objects created from attributeless empty elements, i.e. elements which have neither children nor attributes.
 
+## Compound types
+
+```php
+<?php
+///arrays
+$array = array( //for earlier PHP versions
+    "foo" => "bar",
+    "bar" => "foo",
+);
+
+// Using the short array syntax 
+$array = [
+    "foo" => "bar",
+    "bar" => "foo",
+];
+
+///objects
+
+//casting array to object
+$obj = (object)array('1' => 'foo');
+var_dump(isset($obj->{'1'})); // outputs 'bool(true)' as of PHP 7.2.0; 'bool(false)' previously
+var_dump(key($obj)); // outputs 'string(1) "1"' as of PHP 7.2.0; 'int(1)' previously
+
+//casting scalar to object
+$obj = (object) 'ciao';
+echo $obj->scalar;  // outputs 'ciao'
+
+//or create class and instantiate it
+
+///
+
+```
+
+__Notes__:
+
+* Arrays
+	The key can either be an **int** or a **string**. The value can be of any type.
+
+	Additionally the following key casts will occur:
+
+	- Strings containing valid decimal ints, 
+	unless the number is preceded by a + sign, will be cast to the int type. E.g. the key "8" will actually be stored under 8. On the other hand "08" will not be cast, as it isn't a valid decimal integer.
+	- Floats are also cast to ints, which means that the fractional part will be truncated. 
+	E.g. the key 8.7 will actually be stored under 8.
+	- Bools are cast to ints, too, i.e. the key true will
+	 actually be stored under 1 and the key false under 0.
+	- Null will be cast to the empty string, i.e. the key null will actually be stored under "".
+	- Arrays and objects can not be used as keys. 
+	Doing so will result in a warning: Illegal offset type.
+	
+* Objects
+	- If an object is converted to an object, it is not modified. 
+	- If a value of any other type is converted to an object, 
+	a new instance of the stdClass built-in class is created. 
+	If the value was null, the new instance will be empty. 
+	An array converts to an object with properties named 
+	by keys and corresponding values. 
+	- Note that in this case before PHP 7.2.0 numeric keys have been inaccessible unless iterated.
+	- For any other value, a member variable named scalar will contain the value.
