@@ -1,1 +1,11 @@
 # Doctrine questions
+- What is an EntityManager?
+- What is an Entity?
+- ServiceEntityRepository vs EntityRepository
+- DataMapper pattern in Doctrine
+- Patterns in Doctrine
+- Unit Of Work
+- Inheritance Mapping
+- Annotations for mapping Repository to an Entity
+- Annotations for describing relations (ManyToOne, ManyToMany)
+- DQL vs DBAL
