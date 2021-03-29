@@ -18,8 +18,18 @@
 - Active Record VS Data Mapper
 - Composition VS Aggregation
 - IoC (DiC)
+- Composition vs Interitance
+- Invariance vs covariance vs contrvariance
+- Why getters and setters are bad
+- What is an object's behavior
 
 #Software design
 - DDD
+- Entity VS Data Transfer Object vs Value Object
 - CQRS
 - Event Sourcing
+- GRASP patterns. Low coupling vs high cohesion
+- Demetra's law
+- Anemic model
+- Onion architecture
+- Hexagonal architecture
