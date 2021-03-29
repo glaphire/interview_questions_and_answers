@@ -8,7 +8,7 @@
 - Cases of passing variable by reference by default
 - Multiple inheritance in PHP
 - What is OPCache
-- What is an anonymous function
+- Closure vs anonymous function
 - What is autoload
 - How sessions works
 - How to call object destructor
@@ -29,6 +29,7 @@
 
 ## Tools
 - Composer - purpose and possibilities
+- composer install vs composer update
 
 ------
 
