@@ -43,3 +43,4 @@
     Which constructor will be inherited in class C?
 
 3. How can you call a method with the same name from parent class inside child class?
+4. How to find second largest number in an unsorted list? You can use only one iteration to find it.
