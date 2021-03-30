@@ -22,7 +22,8 @@
 - Invariance vs covariance vs contrvariance
 - Why getters and setters are bad
 - What is an object's behavior
-- Service Locator vs Inversion of Control (Dependency Injection) Container
+- Service Locator VS Inversion of Control (Dependency Injection) Container
+- Registry pattern VS Service Locator
 
 #Software design
 - DDD
