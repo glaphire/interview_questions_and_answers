@@ -35,6 +35,7 @@
 - Anemic model
 - Onion architecture
 - Hexagonal architecture
+- Immutable objects
 
 #Tricky questions
 - Does adding a public field in an extended class violate Liskov Substitution principle?
