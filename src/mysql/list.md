@@ -1,9 +1,30 @@
 # Mysql & General database questions
 
+## Indices
 - Index types in MySQL
 - How indices are stored in database
 - Algorithmic complexity of searching by index and without index
+- Compound indices
+- Searching by several indices
+
+## Engines
+- MySQL Engines
+- MyISAM vs InnoDB
+
+##Other
 - Char vs Varchar
 - What is selectivity
 - ANALYZE vs EXPLAIN commands
-- Selectivity
+- WHERE vs HAVING
+- List on events on which trigger can be added
+- Foreign keys - why they are used
+
+##Pure theoretical questions
+- Join types
+- ACID
+- Isolation levels in transactions
+- Normal forms
+- Normalization VS denormalization
+
+## Practical questions
+- Write many-to-many select query with some WHERE filter
