@@ -22,6 +22,7 @@
 - Invariance vs covariance vs contrvariance
 - Why getters and setters are bad
 - What is an object's behavior
+- Service Locator vs Inversion of Control (Dependency Injection) Container
 
 #Software design
 - DDD
@@ -33,3 +34,7 @@
 - Anemic model
 - Onion architecture
 - Hexagonal architecture
+
+#Tricky questions
+- Does adding a public field in an extended class violate Liskov Substitution principle?
+- Does throwing and exception inside method of an extended class violate Liskov Substitution principle?
