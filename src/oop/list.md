@@ -37,6 +37,7 @@
 - Hexagonal architecture
 - Immutable objects
 - Why service classes should be stateless
+- KISS, DRY, YAGNI - explain abbreviations
 
 #Tricky questions
 - Does adding a public field in an extended class violate Liskov Substitution principle?
