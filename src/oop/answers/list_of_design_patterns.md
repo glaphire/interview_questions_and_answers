@@ -56,11 +56,12 @@
 </tr>
 </table>
 
-## Creational
+## Differences between design patterns' types
+### Creational
 Main purpose - encapsulation of object creation or class creation logic.
 
-## Behavioral
+### Behavioral
 Used to identify common communication patterns between objects.
 
-## Structural
+### Structural
 Provides the way of organizing classes and objects into structures with a new functionality.
