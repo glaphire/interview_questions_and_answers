@@ -126,3 +126,5 @@ while the PHP memcached module uses the libMemcached client library and also con
         <td align="center">Yes</td>
     </tr>
 </table>
+
+[Table source: wiki](https://github.com/memcached/old-wiki/blob/master/PHPClientComparison.wiki)
