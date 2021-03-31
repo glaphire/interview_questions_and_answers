@@ -1,7 +1,7 @@
 # OOP questions 
 - OOP main definitions
 - Polymorphism vs inheritance
-- [Design patterns - main types](https://github.com/glaphire/interview_questions_and_answers/blob/main/src/oop/answers/list_of_design_patterns.md)
+- [Design patterns - main types](https://github.com/glaphire/interview_questions_and_answers/blob/main/src/oop/answers/list_of_design_patterns.md#differences-between-design-patterns-types)
 - [List of design patterns](https://github.com/glaphire/interview_questions_and_answers/blob/main/src/oop/answers/list_of_design_patterns.md)
 - Design patterns used in popular php frameworks
 - Example of pattern usage in your personal projects
