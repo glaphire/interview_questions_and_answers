@@ -55,12 +55,12 @@
 		<td>Eviction policies' characteristics</td>
 		<td>Memory defragmentation on fast changing data (affects performance).
 		"Last recent used" policy isn't fully straightforward - old data with similar size is replaced by the new one.</td>
-		<td>Several policies. [Eviction policies](https://redis.io/topics/lru-cache)</td>
+		<td>Several policies. <a href="https://redis.io/topics/lru-cache">Eviction policies</a></td>
 	</tr>
 	<tr>
 		<td>RAM usage</td>
 		<td>Relatively small due to short keys and values and only one data type</td>
-		<td>Relatively git due to metadata for handling different data types</td>
+		<td>Relatively big due to metadata for handling different data types</td>
 	</tr>
 	<tr>
 		<td>Monitoring/Tuning</td>
