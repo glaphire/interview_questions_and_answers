@@ -1,7 +1,7 @@
 # Memcache VS Memcached
 
 _Memcache module in PHP is for Memcached._
-_Memcached module in PHP is for LibMemchaced._
+_Memcached module in PHP is for LibMemcached (API for Memcache)._
 
 
 ## Memcache
@@ -128,3 +128,17 @@ while the PHP memcached module uses the libMemcached client library and also con
 </table>
 
 [Table source: wiki](https://github.com/memcached/old-wiki/blob/master/PHPClientComparison.wiki)
+
+## Pros & Cons (Memcached)
+Pros: 
+- Great scalability (because it's a separate service)
+- Good for storing small objects (< 250 characters)
+- Automatic serialization/deserialization for objects
+
+Cons:
+- Doesn't have atomic locks (original value loss due to 
+overriding by several processes)
+- Is bad for sessions in PHP (due to previous issue)
+- Can't use "store forever" functionality - data will be lost 
+if Memcached runs out of memory (automatic removal of stale data)
+- Bad performance for large complex objects (serialization/deserialization costs)
