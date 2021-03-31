@@ -8,6 +8,7 @@
 - Observer+Mediator - in EventDispatcher component
 - Command bus - in Messenger component
 - Factory - as part of service container settings; in HttpKernel\ControllerMetadata\ArgumentMetadataFactory
+- Composite - in Forms Component - (the way of Form parts are rendered)
 [documentation](https://symfony.com/doc/current/service_container/factories.html)
 
 ## Doctrine
