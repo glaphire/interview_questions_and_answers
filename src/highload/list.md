@@ -3,9 +3,9 @@
 - How PHP-FPM works
 - How PHP-FPM works with Nginx
 - How to optimize single insert in a big table
-- ANALYZE VS EXPLAIN in MySQL
 - Tools for analyzing problems on database side of an application
 - How to narrow problems on php side of an application
 - Sharding. Vertical vs Horizontal sharding
 - Partitioning
 - How to deal with deadlocks in MySQL
+- Optimistic/pessimistic lock
