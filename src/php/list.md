@@ -4,7 +4,7 @@
 - [Data types in PHP. Describe Resource and Callable types](https://github.com/glaphire/interview_questions_and_answers/blob/main/src/php/answers/data_types_in_php.md)
 - this VS self, self VS static, parent VS self
 - Magic constants list. Does magic constant's value depend on the place where it is called
-- Generators usage examples
+- Generators usage examples. What makes generator to become a function?
 - Cases of passing variable by reference by default
 - Multiple inheritance in PHP
 - What is OPCache
@@ -17,10 +17,13 @@
 - Magic methods
 - Late static bindings
 - Persistent Database Connections
+- Reflection practical usage examples
 
 ## Traits
 - Traits - how add them. Inheriting and Instantiating traits
 - How traits are included on low level
+- Can you add constant to a trait? How can you use that constant?
+- Can you use private or protected methods in a trait?
 
 ## PHP versions
 - New features in PHP7 (main differences from PHP5)
