@@ -15,3 +15,6 @@
 - Concurrency VS Parallelism
 - Docker - ENV vs ARG in Dockerfile
 - Docker-compose - how to map host in docker-compose.yml
+- How JWT authorization works
+- REST API - PUT request specification
+- REST API (HTTP) - POST vs PUT
