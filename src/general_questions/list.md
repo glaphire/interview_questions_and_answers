@@ -13,3 +13,5 @@
 - Docker (docker-compose)
 - Domain Driven Design (main concepts)
 - Concurrency VS Parallelism
+- Docker - ENV vs ARG in Dockerfile
+- Docker-compose - how to map host in docker-compose.yml
