@@ -13,6 +13,7 @@
     - Decorator
     - Proxy
     - Observer
+    - Data Mapper
 - SOLID principles. Usage examples
 - Active Record pattern
 - Active Record VS Data Mapper
@@ -38,6 +39,8 @@
 - Immutable objects
 - Why service classes should be stateless
 - KISS, DRY, YAGNI - explain abbreviations
+- DTO vs Command (ps. dto is usually serialized, but command object is not)
+- Sepatation of Concerns
 
 ## Tricky questions
 - Does adding a public field in an extended class violate Liskov Substitution principle?
