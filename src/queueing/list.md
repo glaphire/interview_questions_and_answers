@@ -3,3 +3,5 @@
 ## RabbitMQ
 - Message lifecycle 
 - Exchange types
+- Ack/Nack
+- Queue/Requeue
