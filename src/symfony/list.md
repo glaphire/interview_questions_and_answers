@@ -11,6 +11,8 @@
 - Sync vs Async transport in Messenger
 - What is a CompilerPass
 - How route is parsed to become mapped with controller action
+- List of Symfony Events
+- Lazy Loading for classes
 
 Components:
 - Serialization Component
