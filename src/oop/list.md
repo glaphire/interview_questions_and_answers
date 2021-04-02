@@ -26,6 +26,7 @@
 - What is an object's behavior
 - Service Locator VS Inversion of Control (Dependency Injection) Container
 - Registry pattern VS Service Locator
+- Dependency Injection VS Composition VS Inversion of Control
 
 ## Software design
 - DDD
