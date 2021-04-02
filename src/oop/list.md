@@ -14,6 +14,7 @@
     - Proxy
     - Observer
     - Data Mapper
+    - Command Bus
 - SOLID principles. Usage examples
 - Active Record pattern
 - Active Record VS Data Mapper
