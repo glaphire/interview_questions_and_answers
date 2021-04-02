@@ -1,4 +1,4 @@
-# git merge VS git push VS git fetch
+# git merge VS git pull VS git fetch
 
 **git merge** - command for joining one or more histories together.
 
