@@ -1,5 +1,6 @@
 # git merge VS git pull VS git fetch
 
+## Merge
 **git merge** - command for joining one or more histories together.
 
 ```
@@ -37,6 +38,7 @@ then this single commit is combined with last commit in master branch, and resul
 Warning: Running git merge with non-trivial uncommitted changes is discouraged: while possible, 
 it may leave you in a state that is hard to back out of in the case of a conflict.
 
+## fetch
 **git fetch** - downloads objects and refs from another repository.
 Fetch branches and/or tags (collectively, "refs") from one or more other repositories, 
 along with the objects necessary to complete their histories. 
@@ -53,6 +55,7 @@ The names of refs that are fetched, together with the object names they point at
 are written to `.git/FETCH_HEAD`. 
 This information may be used by scripts or other git commands, such as `git-pull`.
 
+## Pull
 **git pull** - fetches from and integrates with another repository or a local branch.
 
 Includes changes from a remote repository into the current branch. 
