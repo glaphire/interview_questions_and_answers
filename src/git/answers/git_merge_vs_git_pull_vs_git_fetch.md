@@ -32,8 +32,12 @@ the names of the two parent commits and a log message from the user describing t
     D---E---F---G---H master
 ```
 
-TLDR: When you merge *your* branch in master, commits in your branch are  commit, 
-then this single commit is combined with last commit in master branch, and result is a new commit (H).
+###TLDR 
+When you merge *your* branch in master, a new commit is created in master 
+that points both on your branch and master.
+All commits from your branch are checked (replayed) to prevent conflicts.
+Merge commit has two parents.
+Your branch stays unchanged, merge commit is added to the current (result branch) - master.
 
 Warning: Running git merge with non-trivial uncommitted changes is discouraged: while possible, 
 it may leave you in a state that is hard to back out of in the case of a conflict.
@@ -66,7 +70,36 @@ Includes changes from a remote repository into the current branch.
 More precisely, git pull runs git fetch with the given parameters and calls git merge to merge the retrieved branch 
 heads into the current branch. With --rebase, it runs git rebase instead of git merge.
 
+[merge strategies - RU](https://www.atlassian.com/ru/git/tutorials/using-branches/merge-strategy)
+
 # git merge VS git rebase
 
 ## rebase
-*git rebase** - Reapplies commits on top of another base tip
+*git rebase** - Reapplies commits on top of another branch.
+
+Assume the following history exists and the current branch is "topic":
+```
+          A---B---C topic
+         /
+    D---E---F---G master
+```
+
+From this point, the result of either of the following commands:
+
+```git rebase master
+git rebase master topic
+```
+
+would be:
+```
+                  A'--B'--C' topic
+                 /
+    D---E---F---G master
+```
+
+### TLDR
+git rebase squashes commits from current branch 
+to a single commit and puts it on the top of another branch.
+
+So, `git merge` saves another's branch history, creates new commits that point on two parent branches.
+At the same time `git rebase` squashes branch history and creates one branch with new single commit on top of second branch.
