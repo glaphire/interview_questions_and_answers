@@ -40,6 +40,8 @@ it may leave you in a state that is hard to back out of in the case of a conflic
 
 ## Fetch111
 22222
+33311
+33222
 **git fetch** - downloads objects and refs from another repository.
 Fetch branches and/or tags (collectively, "refs") from one or more other repositories, 
 along with the objects necessary to complete their histories. 
@@ -68,7 +70,7 @@ Includes changes from a remote repository into the current branch.
 
 More precisely, git pull runs git fetch with the given parameters and calls git merge to merge the retrieved branch 
 heads into the current branch. With --rebase, it runs git rebase instead of git merge.
-
+555111
 # git merge VS git rebase
 
 ## rebase
