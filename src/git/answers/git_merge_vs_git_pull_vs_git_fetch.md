@@ -62,6 +62,7 @@ This information may be used by scripts or other git commands, such as `git-pull
 Includes changes from a remote repository into the current branch. 
 
 **IMPORTANT:**
+44111
 `git pull` is a shorthand for `git fetch`+`git merge FETCH_HEAD` (it default mode of this command).
 
 More precisely, git pull runs git fetch with the given parameters and calls git merge to merge the retrieved branch 
