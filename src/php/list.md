@@ -8,9 +8,9 @@
 - Cases of passing variable by reference by default
 - Multiple inheritance in PHP
 - What is OPCache
-- Closure vs anonymous function
+- [Closure vs anonymous function](https://github.com/glaphire/interview_questions_and_answers/blob/main/src/php/answers/closure_vs_anonymous_function.md)
 - What is autoload
-- How sessions works
+- How sessions work
 - How to call object destructor
 - Calling object destructor VS garbage collector
 - Interfaces. Inheritance of interfaces
