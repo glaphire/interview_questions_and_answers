@@ -4,7 +4,7 @@
 - [Data types in PHP. Describe Resource and Callable types](https://github.com/glaphire/interview_questions_and_answers/blob/main/src/php/answers/data_types_in_php.md)
 - [this VS self, self VS static, parent VS self](https://github.com/glaphire/interview_questions_and_answers/blob/main/src/php/answers/this_vs_self_vs_parent.md)
 - [Magic constants list. Does magic constant's value depend on the place where it is called?](https://github.com/glaphire/interview_questions_and_answers/blob/main/src/php/answers/magic_constants.md)
-- Generators usage examples. What makes generator to become a function?
+- [Generators usage examples. What makes a function become a generator?](https://github.com/glaphire/interview_questions_and_answers/blob/main/src/php/answers/generators.md)
 - Cases of passing variable by reference by default
 - Multiple inheritance in PHP
 - What is OPCache
