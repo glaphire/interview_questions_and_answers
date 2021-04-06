@@ -15,6 +15,7 @@
 - Calling object destructor VS garbage collector
 - Interfaces. Inheritance of interfaces
 - Magic methods
+- __invoke method useful examples
 - Late static bindings
 - Persistent Database Connections
 - Reflection practical usage examples
