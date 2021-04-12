@@ -1,6 +1,6 @@
 # Doctrine questions
 - [What is an EntityManager?](https://github.com/glaphire/interview_questions_and_answers/blob/main/src/doctrine/answers/what_is_an_entity_manager.md)
-- What is an Entity?
+- [What is an Entity?](https://github.com/glaphire/interview_questions_and_answers/blob/main/src/doctrine/answers/what_is_an_entity.md)
 - ServiceEntityRepository vs EntityRepository
 - DataMapper pattern in Doctrine
 - Patterns in Doctrine
