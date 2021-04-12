@@ -1,5 +1,7 @@
 # List of Doctrine Events
 
+[lib/Doctrine/ORM/Events.php on github](https://github.com/doctrine/orm/blob/2.8.x/lib/Doctrine/ORM/Events.php)
+
 <table border=1 cellpadding=5>
 	<tr>
 		<td colspan=1>Doctrine Events</td>
@@ -57,13 +59,13 @@
 	</tr>
 	<tr>
 		<td>loadClassMetadata</td>
-		<td>???</td>
+		<td>Bootstraping</td>
 		<td>The <b>loadClassMetadata</b> event occurs after the mapping metadata for a class
 			has been loaded from a mapping source (annotations/xml/yaml).</td>
 	</tr>
 	<tr>
 		<td>onClassMetadataNotFound</td>
-		<td>???</td>
+		<td>Bootstraping</td>
 		<td>The <b>onClassMetadataNotFound</b> event occurs whenever loading metadata for a class failed.</td>
 	</tr>
 	<tr>
