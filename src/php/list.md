@@ -5,6 +5,7 @@
 - [this VS self, self VS static, parent VS self](https://github.com/glaphire/interview_questions_and_answers/blob/main/src/php/answers/this_vs_self_vs_parent.md)
 - [Magic constants list. Does magic constant's value depend on the place where it is called?](https://github.com/glaphire/interview_questions_and_answers/blob/main/src/php/answers/magic_constants.md)
 - [Generators usage examples. What makes a function become a generator?](https://github.com/glaphire/interview_questions_and_answers/blob/main/src/php/answers/generators.md)
+- 'yield from' syntax
 - Cases of passing variable by reference by default
 - Multiple inheritance in PHP
 - What is OPCache
@@ -19,6 +20,7 @@
 - Late static bindings
 - Persistent Database Connections
 - Reflection practical usage examples
+- Purpose of immutable objects existence (e.g. DateTimeImmutable)
 
 ## Traits
 - Traits - how add them. Inheriting and Instantiating traits
@@ -34,6 +36,7 @@
 ## Tools
 - Composer - purpose and possibilities
 - composer install vs composer update
+- Main steps of 'composer install' command
 
 ------
 
@@ -48,3 +51,4 @@
 
 3. How can you call a method with the same name from parent class inside child class?
 4. How to find second largest number in an unsorted list? You can use only one iteration to find it.
+5. What's the difference between empty() and is_null()?
