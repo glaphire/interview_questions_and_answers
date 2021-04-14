@@ -21,6 +21,7 @@
 - Persistent Database Connections
 - Reflection practical usage examples
 - Purpose of immutable objects existence (e.g. DateTimeImmutable)
+- Popular SPL functions
 
 ## Traits
 - Traits - how add them. Inheriting and Instantiating traits
