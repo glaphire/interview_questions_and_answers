@@ -6,6 +6,7 @@
 - Algorithmic complexity of searching by index and without index
 - Compound indices
 - Searching by several indices
+- Wrong cases and problems of using compound indices
 
 ## Engines
 - MySQL Engines
