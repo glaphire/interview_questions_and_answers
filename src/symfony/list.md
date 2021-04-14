@@ -21,3 +21,4 @@ Components:
 - Security Component
 - Validator Component
 - DependencyInjection Component
+- EventDispatcher Component
