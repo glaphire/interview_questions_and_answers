@@ -9,7 +9,7 @@
 - How to write REST API in Symfony
 - What is Symfony Flex
 - Sync vs Async transport in Messenger
-- What is a CompilerPass
+- [What is a CompilerPass](https://github.com/glaphire/interview_questions_and_answers/blob/main/src/symfony/answers/what_is_a_compiler_pass.md)
 - How route is parsed to become mapped with controller action
 - List of Symfony Events
 - Lazy Loading for classes
