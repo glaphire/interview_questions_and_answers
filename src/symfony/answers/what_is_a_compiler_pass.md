@@ -1,4 +1,4 @@
-#CompilerPass
+# CompilerPass
 
 Compiling service container allows:
 - to prevent circular references in service dependencies
