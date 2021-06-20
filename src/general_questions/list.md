@@ -14,7 +14,7 @@
 
 ## HTTP
 - HTTP protocol: request and response structure
-- [HTTP streaming](https://github.com/glaphire/interview_questions_and_answers/blob/main/src/general_questions/answers/http_streaming)
+- [HTTP streaming](https://github.com/glaphire/interview_questions_and_answers/blob/main/src/general_questions/answers/http_streaming.md)
 
 ## Security
 - OWASP Top 10
