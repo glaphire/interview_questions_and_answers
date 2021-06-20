@@ -102,3 +102,53 @@ A server should send a 408 Request Timeout status code to the
 client immediately before closing the connection. Client can open a new connection when
 request is idempotent.
 
+## HTTP Pipelining
+
+[wikipedia](https://en.wikipedia.org/wiki/HTTP_pipelining)
+
+HTTP pipelining is a feature of HTTP/1.1 which allows multiple HTTP requests 
+to be sent over a single TCP connection without waiting for the corresponding responses.
+HTTP/1.1 specification requires servers to respond to pipelined requests correctly, 
+sending back non-pipelined but valid responses even if server does not support HTTP pipelining. 
+Despite this requirement, many legacy HTTP/1.1 servers do not support pipelining correctly, 
+forcing most HTTP clients to not use HTTP pipelining in practice.
+
+The technique was replaced by multiplexing via HTTP/2, which is supported by most modern browsers.
+
+![HTTP pipelining illustration](https://en.wikipedia.org/wiki/File:HTTP_pipelining2.svg)
+
+### Pipelining pros and cons
+
+The pipelining of requests results in a dramatic improvement in the loading times of HTML pages, 
+especially over high latency connections such as satellite Internet connections. 
+The speedup is less apparent on broadband connections, as the limitation of HTTP 1.1 still applies: 
+the server must send its responses in the same order that the requests were 
+received—so the entire connection remains first-in-first-out and HOL blocking can occur. 
+The asynchronous operation of HTTP/2 and SPDY are solutions for this.
+Browsers ultimately did not enable pipelining by default, 
+and by 2017 most browsers supported HTTP/2 by default which used multiplexing instead.
+
+Non-idempotent requests, like those using POST, should not be pipelined.
+Sequences of GET and HEAD requests can always be pipelined. 
+A sequence of other idempotent requests like PUT and DELETE can be pipelined 
+or not depending on whether requests in the sequence depend on the effect of others.
+
+HTTP pipelining requires both the client and the server to support it. 
+HTTP/1.1 conforming servers are required to support pipelining. 
+This does not mean that servers are required to pipeline responses, 
+but that they are required not to fail if a client chooses to pipeline requests.
+
+### Head-of-line blocking
+
+HOL blocking in computer networking is a performance-limiting phenomenon
+that occurs when a line of packets is held up by the first packet.
+Examples include input buffered network switches, 
+out-of-order delivery and multiple requests in HTTP pipelining.
+
+One form of HOL blocking in HTTP/1.1 is when the number of allowed parallel 
+requests in the browser is used up, and subsequent requests need to wait 
+for the former ones to complete. 
+HTTP/2 addresses this issue through request multiplexing, 
+which eliminates HOL blocking at the application layer, 
+but HOL still exists at the transport (TCP) layer.
+
