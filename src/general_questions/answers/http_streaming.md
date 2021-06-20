@@ -1,12 +1,7 @@
 # HTTP Streaming
 
-[source](https://www.pubnub.com/learn/glossary/what-is-http-streaming/)
+[source www.pubnub.com](https://www.pubnub.com/learn/glossary/what-is-http-streaming/)
 
-https://en.wikipedia.org/wiki/HTTP_Live_Streaming
-
-https://ru.wikipedia.org/wiki/HLS
-
-https://facecast.net/ru/blog/http-live-streaming/
 
 HTTP Streaming is a push-style data transfer technique that 
 allows a web server to continuously send data to a client 
@@ -115,8 +110,6 @@ forcing most HTTP clients to not use HTTP pipelining in practice.
 
 The technique was replaced by multiplexing via HTTP/2, which is supported by most modern browsers.
 
-![HTTP pipelining illustration](https://en.wikipedia.org/wiki/File:HTTP_pipelining2.svg)
-
 ### Pipelining pros and cons
 
 The pipelining of requests results in a dramatic improvement in the loading times of HTML pages, 
@@ -152,3 +145,94 @@ HTTP/2 addresses this issue through request multiplexing,
 which eliminates HOL blocking at the application layer, 
 but HOL still exists at the transport (TCP) layer.
 
+## HTTP Live Streaming
+
+[wikipedia](https://en.wikipedia.org/wiki/HTTP_Live_Streaming)
+
+HTTP Live Streaming (also known as HLS) is an HTTP-based adaptive bitrate 
+streaming communications protocol developed by Apple Inc. and released in 2009. 
+Support for the protocol is widespread in media players, web browsers, mobile devices, 
+and streaming media servers. 
+
+HLS resembles MPEG-DASH in that it works by breaking the overall stream into a sequence 
+of small HTTP-based file downloads, each downloading one short chunk of an overall 
+potentially unbounded transport stream. A list of available streams, encoded at different bit rates, 
+is sent to the client using an extended M3U playlist.
+
+Based on standard HTTP transactions, HTTP Live Streaming can traverse any firewall 
+or proxy server that lets through standard HTTP traffic, 
+unlike UDP-based protocols such as RTP. 
+This also allows content to be offered from conventional HTTP servers and delivered 
+over widely available HTTP-based content delivery networks.
+The standard also includes a standard encryption mechanism and secure-key distribution using HTTPS, 
+which together provide a simple DRM system. 
+Later versions of the protocol also provide for trick-mode fast-forward and 
+rewind and for integration of subtitles.
+
+Apple has documented HTTP Live Streaming as an Internet Draft (Individual Submission),
+the first stage in the process of publishing it as a Request for Comments (RFC).
+
+## Comparisons
+
+[stackoverflow answer](https://stackoverflow.com/a/14711517/5371978)
+
+- __TCP__: low-level, bi-directional, full-duplex, and guaranteed order transport layer. 
+No browser support (except via plugin/Flash).
+- __HTTP 1.0__: request-response transport protocol layered on TCP. 
+The client makes one full request, the server gives one full response, 
+and then the connection is closed. The request methods (GET, POST, HEAD) 
+have specific transactional meaning for resources on the server.
+- __HTTP 1.1__: maintains the request-response nature of HTTP 1.0, 
+but allows the connection to stay open for multiple full requests/full 
+responses (one response per request). Still has full headers in the request 
+and response but the connection is re-used and not closed. HTTP 1.1 
+also added some additional request methods (OPTIONS, PUT, DELETE, TRACE, CONNECT) 
+which also have specific transactional meanings. However, as noted in the introduction 
+to the HTTP 2.0 draft proposal, HTTP 1.1 pipelining is not widely deployed so this greatly 
+limits the utility of HTTP 1.1 to solve latency between browsers and servers.
+- __Long-poll__: sort of a "hack" to HTTP (either 1.0 or 1.1) where the server 
+does not respond immediately (or only responds partially with headers) 
+to the client request. After a server response, the client immediately 
+sends a new request (using the same connection if over HTTP 1.1).
+- __HTTP streaming__: a variety of techniques (multipart/chunked response) 
+that allow the server to send more than one response to a single 
+client request. The W3C is standardizing this as Server-Sent Events using 
+a text/event-stream MIME type. The browser API (which is fairly similar 
+to the WebSocket API) is called the EventSource API.
+- __Comet/server push__: this is an umbrella term that includes 
+both long-poll and HTTP streaming. Comet libraries usually 
+support multiple techniques to try and maximize cross-browser and cross-server support.
+- __WebSockets__: a transport layer built-on TCP that uses an HTTP friendly Upgrade handshake. 
+Unlike TCP, which is a streaming transport, WebSockets is a message based transport: 
+messages are delimited on the wire and are re-assembled in-full before delivery to the application. 
+WebSocket connections are bi-directional, full-duplex and long-lived. 
+After the initial handshake request/response, there is no transactional semantics 
+and there is very little per message overhead. The client and server may 
+send messages at any time and must handle message receipt asynchronously.
+- __SPDY__: a Google initiated proposal to extend HTTP using a more efficient 
+wire protocol but maintaining all HTTP semantics (request/response, cookies, encoding). 
+SPDY introduces a new framing format (with length-prefixed frames) and specifies 
+a way to layering HTTP request/response pairs onto the new framing layer. 
+Headers can be compressed and new headers can be sent after the connection 
+has been established. There are real world implementations of SPDY in browsers and servers.
+- __HTTP 2.0__: has similar goals to SPDY: reduce HTTP latency and overhead while 
+preserving HTTP semantics. The current draft is derived from SPDY and defines 
+an upgrade handshake and data framing that is very similar the the WebSocket 
+standard for handshake and framing. An alternate HTTP 2.0 draft proposal 
+(httpbis-speed-mobility) actually uses WebSockets for the transport layer 
+and adds the SPDY multiplexing and HTTP mapping as an WebSocket extension 
+(WebSocket extensions are negotiated during the handshake).
+- __WebRTC/CU-WebRTC__: proposals to allow peer-to-peer connectivity between browsers. 
+This may enable lower average and maximum latency communication because as 
+the underlying transport is SDP/datagram rather than TCP. 
+This allows out-of-order delivery of packets/messages which avoids 
+the TCP issue of latency spikes caused by dropped packets which delay 
+delivery of all subsequent packets (to guarantee in-order delivery).
+- __QUIC__: is an experimental protocol aimed at reducing web latency over that of TCP. 
+On the surface, QUIC is very similar to TCP+TLS+SPDY implemented on UDP. 
+QUIC provides multiplexing and flow control equivalent to HTTP/2, 
+security equivalent to TLS, and connection semantics, reliability, 
+and congestion control equivalentto TCP. Because TCP is implemented 
+in operating system kernels, and middlebox firmware, making significant 
+changes to TCP is next to impossible. However, since QUIC is built on top of UDP, 
+it suffers from no such limitations. QUIC is designed and optimised for HTTP/2 semantics.
