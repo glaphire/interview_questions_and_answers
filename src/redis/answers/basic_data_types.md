@@ -89,6 +89,7 @@ O(1) for each element addedfor large lists; and N is the number of elements in t
 ### Sets
 
 Redis Sets are unordered collections of strings.
+Sets were introduced earlier than Hashes. Hashes are useful for more complex data than sets and are more space-efficient.
 
 Useful examples:
 - keeping relations ids';
@@ -128,7 +129,11 @@ Time complexity:
 
 ### Sorted sets
 
+Ordered sets are key-value like arrays. The keys are the floating point values called **scores**.
+
 Useful examples:
+- getting range of values.
+(TODO: finish answer)
 
 Simplest example:
 
@@ -136,7 +141,7 @@ Time complexity:
 
 ### Hashes
 
-Hash in Redis is an array of unordered values.
+Hash in Redis is an array of values.
 
 Useful examples:
 - keeping objects' values
