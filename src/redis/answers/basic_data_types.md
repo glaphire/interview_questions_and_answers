@@ -33,6 +33,18 @@ OK
 "somevalue"
 ```
 
+Example with expiration (in seconds):
+```
+> set key some-value
+OK
+> expire key 5
+(integer) 1
+> get key (immediately)
+"some-value"
+> get key (after some time)
+(nil)
+```
+
 ### Lists
 
 ### Sets
