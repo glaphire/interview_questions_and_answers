@@ -3,9 +3,9 @@
 1. [Binary-safe strings](#strings)
 2. [Lists](#lists)
 3. [Sets](#sets)
-4. [Sorted sets](#sorted sets)
+4. [Sorted sets](#sorted-sets)
 5. [Hashes](#hashes)
-6. [Bit Arrays](#bit arrays)
+6. [Bit Arrays](#bit-arrays)
 
 ## Intro
 
@@ -88,11 +88,43 @@ O(1) for each element addedfor large lists; and N is the number of elements in t
 
 ### Sets
 
+Redis Sets are unordered collections of strings.
+
 Useful examples:
+- keeping relations ids';
+- getting random member of collection;
+- check that element is member of a collection;
+- performing sets operations - intersection, union, difference.
 
 Simplest example:
+```
+> sadd news:1000:tags 1 2 5 77
+(integer) 4
+
+> sadd tag:1:news 1000
+(integer) 1
+> sadd tag:2:news 1000
+(integer) 1
+> sadd tag:5:news 1000
+(integer) 1
+> sadd tag:77:news 1000
+(integer) 1
+
+> smembers news:1000:tags
+1. 5
+2. 1
+3. 77
+4. 2
+```
 
 Time complexity:
+- SADD - O(N), N - number of elements
+- SPOP - O(N), N - number of elements
+- SISMEMBER - O(1)
+- SINTER - O(N*M) worst case where N is the cardinality of the smallest set and M is the number of sets.
+- SCARD - O(1)
+- SRANDMEMBER - O(N), N - number of elements
+- SREM - O(N), N - number of elements
 
 ### Sorted sets
 
