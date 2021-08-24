@@ -8,3 +8,4 @@
 - AMQP 0-9-1
 - AMQP vs TCP
 - Durable queues
+- Pull vs Push model
