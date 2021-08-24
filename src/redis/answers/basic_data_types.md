@@ -1,11 +1,11 @@
 # Basic Data Types
 
-1. [Binary-safe strings](#some-markdown-heading)
-2. Lists
-3. Sets
-4. Sorted sets
-5. Hashes
-6. Bit Arrays
+1. [Binary-safe strings](#strings)
+2. [Lists](#lists)
+3. [Sets](#sets)
+4. [Sorted sets](#sorted sets)
+5. [Hashes](#hashes)
+6. [Bit Arrays](#bit arrays)
 
 ## Intro
 
@@ -79,7 +79,8 @@ Simplest example:
 Time complexity:
 - LPUSH/RPUSH - O(1) for each element added
 - LPOP/RPOP - O(N) where N is the number of elements returned
-- LRANGE - O(S+N) where S is the distance of start offset from HEAD for small lists, from nearest end (HEAD or TAIL) for large lists; and N is the number of elements in the specified range.
+- LRANGE - O(S+N) where S is the distance of start offset from HEAD for small lists, from nearest end (HEAD or TAIL)
+O(1) for each element addedfor large lists; and N is the number of elements in the specified range.
 - LINSERT - O(N) where N is the number of elements to traverse before seeing the value pivot.
 - LINDEX -  O(N) where N is the number of elements to traverse to get to the element at index.
 - LREM - O(N+M) where N is the length of the list and M is the number of elements removed.
@@ -91,20 +92,56 @@ Useful examples:
 
 Simplest example:
 
+Time complexity:
+
 ### Sorted sets
 
 Useful examples:
 
 Simplest example:
 
+Time complexity:
+
 ### Hashes
 
+Hash in Redis is an array of unordered values.
+
 Useful examples:
+- keeping objects' values
+- keeping comments on page
+- when using json or serialization is overhead
 
 Simplest example:
+```
+> hmset user:1000 username antirez birthyear 1977 verified 1
+OK
+> hget user:1000 username
+"antirez"
+> hget user:1000 birthyear
+"1977"
+> hgetall user:1000
+1) "username"
+2) "antirez"
+3) "birthyear"
+4) "1977"
+5) "verified"
+6) "1"
+```
+
+Time complexity:
+- HSET - O(N) where N is the number of fields being set.
+- HGET - O(N) where N is the number of fields being requested.
+- HLEN - O(1)
+- HKEYS - O(N)
+- HEXISTS - O(1)
+- HDEL - O(N)
+- HSCAN - O(1)
+- HSTRLEN - O(1)
 
 ### Bit Arrays
 
 Useful examples:
 
 Simplest example:
+
+Time complexity:
