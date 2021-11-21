@@ -4,7 +4,7 @@
 
 ## Main new Features
 
-1. Named arguments
+1. *Named arguments*
 - specifying only required parameters
 - arguments are order-independent and self-documented
 
@@ -12,21 +12,68 @@
 htmlspecialchars($string, double_encode: false);
 ```
 
-2. Attributes
+2. *Attributes*
+```php
+class PostsController
+{
+	#[Route("/api/posts/{id}", methods: ["GET"])]
+	public function getId($id)
+	{ 
+		/**/
+	}
+}
+```
 
-3. Constructor property promotion
+3. *Constructor property promotion*
+```php
+class Point
+{
+	public function __construct(
+		public float $x = 0.0,
+		public float $y = 0.0,
+		public float $z = 0.0,
+	) {}
+}
+```
+4. *Union types*
+```php
+class Number {
+  public function __construct(
+    private int|float $number
+  ) {}
+}
+```
 
-4. Union types
+5. *Match expression* - partial replacement for switch() with strict comparisons
+```php
+echo match (8.0) {
+  '8.0' => "Oh no!",
+  8.0 => "This is what I expected",
+};
+//> This is what I expected
+```
 
-5. Match expression
+6. *Nullsafe operator ?->* - When the evaluation of one element in the chain fails, 
+the execution of the entire chain aborts and the entire chain evaluates to null.                        
 
-6. Nullsafe operator ?->
+```php
+$country = $session?->user?->getAddress()?->country;
+```
 
-7. Saner string to number comparison
+7. *Saner string to number comparison*
+```php
+0 == 'foobar' // false
+```
 
-8. Consistent type errors for internal functions
+8. *Consistent type errors for internal functions*
+```php
+strlen([]); // TypeError: strlen(): Argument #1 ($str) must be of type string, array given
 
-9. JIT compilator
+array_chunk([], -1); // ValueError: array_chunk(): Argument #2 ($length) must be greater than 0
+```
+
+9. *JIT compilation* - two JIT compilation engines (Tracing and Function) introduced to 
+increase PHP performance.
 
 ## New  classes and functions
 
