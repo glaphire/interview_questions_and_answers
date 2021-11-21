@@ -40,5 +40,30 @@ htmlspecialchars($string, double_encode: false);
 - get_resource_id() - replaces (int)$resource;
 
 ## Type system and error handling improvements
+1. Stricter type checks for arithmetic/bitwise operators: throw TypeError when arithmetic/bitwise operators
+are used on non-scalar types
+2. Abstract trait method validation: 
+3. Correct signatures of magic methods:
+4. Reclassified engine warnings:
+5. Fatal error for incompatible method signatures
+6. The @ operator doesn't suppress fatal errors anymore
+7. Inheritance with private methods
+8. Mixed type
+9. Static return type
+10. Types of internal functions
+11. Opaque objects instead of resources for extensions
+* CURL
+* GD
+* Sockets
+* OpenSSL
+* XMLWriter
+* XML 
 
 ## Other syntax tweaks and improvements
+
+1. Trailing comma in parameter lists and closure use lists
+2. Non-capturing catches
+3. Variable syntax tweaks
+4. Treat namespaced names as single token
+5. Throw becomes an expression
+6. Allow::class on objects 
