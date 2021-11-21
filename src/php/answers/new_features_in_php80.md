@@ -38,3 +38,7 @@ htmlspecialchars($string, double_encode: false);
 - fdiv() - floating-point division;
 - get_debug_type() - replaces checks is_object($bar) ? get_class($bar) : gettype($bar);
 - get_resource_id() - replaces (int)$resource;
+
+## Type system and error handling improvements
+
+## Other syntax tweaks and improvements
