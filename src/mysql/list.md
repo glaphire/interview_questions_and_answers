@@ -19,6 +19,7 @@
 - WHERE vs HAVING
 - List on events on which trigger can be added
 - Foreign keys - why they are used
+- Locks (pessimistic, optimistic, advisory)
 
 ##Pure theoretical questions
 - Join types
@@ -29,3 +30,4 @@
 
 ## Practical questions
 - Write many-to-many select query with some WHERE filter
+- How to add column to live table with one million rows (ALTER TABLE issues)
