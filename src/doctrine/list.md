@@ -11,3 +11,4 @@
 - Annotations for mapping Repository to an Entity
 - Annotations for describing relations (ManyToOne, ManyToMany)
 - [DQL vs DBAL](https://github.com/glaphire/interview_questions_and_answers/blob/main/src/doctrine/answers/dql_vs_dbal.md)
+- Transactions in Doctrine
