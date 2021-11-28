@@ -13,6 +13,7 @@
 - How route is parsed to become mapped with controller action
 - List of Symfony Events
 - Lazy Loading for classes
+- How to validate requests using Forms component
 
 Components:
 - Serialization Component
