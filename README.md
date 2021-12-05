@@ -28,4 +28,6 @@ Questions and topics that I was asked on interviews on Middle/Senior PHP develop
 
 * [ElasticSearch](https://github.com/glaphire/interview_questions_and_answers/tree/main/src/elasticsearch/list.md)
 
+* [Devops](https://github.com/glaphire/interview_questions_and_answers/blob/main/src/devops/list.md)
+
 *Notice:* questions and answers may be in russian (hope to translate in english after some time)
