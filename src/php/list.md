@@ -22,6 +22,7 @@
 - Reflection practical usage examples
 - Purpose of immutable objects existence (e.g. DateTimeImmutable)
 - Popular SPL functions
+- What are the main risks of using PHP as a daemon (Swoole, ReactPHP, Roadrunner etc.) and how to manage them
 
 ## Traits
 - Traits - how add them. Inheriting and Instantiating traits
@@ -33,6 +34,7 @@
 - New features in PHP7 (main differences from PHP5)
 - New features in PHP7.4
 - [New features in PHP 8.0](https://github.com/glaphire/interview_questions_and_answers/blob/main/src/php/answers/new_features_in_php80.md)
+- New features in PHP 8.1
 
 ## Tools
 - Composer - purpose and possibilities
