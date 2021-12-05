@@ -21,7 +21,3 @@
 - Main attacks on web applications and how to prevent them
 - What is CSRF
 - What is CORS
-
-## Devops
-- Describe all steps and processes to create production-ready REST API
-- Your ideas about implementing CI/CD process for general web application
