@@ -1,5 +1,4 @@
 # Highload questions
-- Microservices VS SOA
 - How PHP-FPM works
 - How PHP-FPM works with Nginx
 - How to optimize single insert in a big table
