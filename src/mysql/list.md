@@ -31,3 +31,4 @@
 ## Practical questions
 - Write many-to-many select query with some WHERE filter
 - How to add column to live table with one million rows (ALTER TABLE issues)
+- How to reduce database size (data shrinking)
