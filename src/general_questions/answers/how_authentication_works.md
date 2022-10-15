@@ -44,11 +44,11 @@ There are two approaches for authentication lifetime:
   
 [Stackoverflow answer](https://stackoverflow.com/a/9325698/5371978)
 
-##Logout flow (Web flow)
+## Logout flow (Web flow)
 (TODO)
 
-##Login flow (API flow)
+## Login flow (API flow)
 (TODO)
 
-##Logout flow (Web flow)
+## Logout flow (Web flow)
 (TODO)
