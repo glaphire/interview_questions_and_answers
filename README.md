@@ -1,6 +1,7 @@
 # Interview questions and answers
 
 Questions and topics that I was asked on interviews on Middle/Senior PHP developer position in 2020+ year.
+Answers are added in a spare time, so I'm sorry if something is missing, I'm working on it.
 
 * [PHP](https://github.com/glaphire/interview_questions_and_answers/tree/main/src/php/list.md)
 
