@@ -8,6 +8,7 @@
 - Symfony settings for testing
 - How to mock final class
 - How to mock connection to a database
+- How to mock Doctrine repository requests (practical examples)
 
 ## Practical question
 - How to cover [SymfonyCasts Parser](https://github.com/glaphire/symfonycasts_parser) with functional tests
