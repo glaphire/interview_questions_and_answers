@@ -10,7 +10,7 @@
 - Multiple inheritance in PHP
 - What is OPCache
 - [Closure vs anonymous function](https://github.com/glaphire/interview_questions_and_answers/blob/main/src/php/answers/closure_vs_anonymous_function.md)
-- What is autoload
+- What is an "autoload" in php and Composer?
 - How sessions work
 - How to call object destructor
 - Calling object destructor VS garbage collector
@@ -35,6 +35,7 @@
 - New features in PHP7.4
 - [New features in PHP 8.0](https://github.com/glaphire/interview_questions_and_answers/blob/main/src/php/answers/new_features_in_php80.md)
 - New features in PHP 8.1
+- New features in PHP 8.2
 
 ## Tools
 - Composer - purpose and possibilities
@@ -48,10 +49,10 @@
 2. There are classes A, B, C with some restrictions:
     - A with a public constructor
     - B with a private constructor
-    - C  extends B
+    - C extends B
     
     Which constructor will be inherited in class C?
 
 3. How can you call a method with the same name from parent class inside child class?
-4. How to find second largest number in an unsorted list? You can use only one iteration to find it.
+4. How to find second-largest number in an unsorted list? You can use only one iteration to find it.
 5. What's the difference between empty() and is_null()?
