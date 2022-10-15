@@ -20,8 +20,8 @@
 - Active Record VS Data Mapper
 - Composition VS Aggregation
 - IoC (DiC)
-- Composition vs Interitance
-- Invariance vs covariance vs contrvariance
+- Composition vs Inheritance
+- Invariance vs Covariance vs Contrvariance
 - Why getters and setters are bad
 - What is an object's behavior
 - Service Locator VS Inversion of Control (Dependency Injection) Container
@@ -42,7 +42,7 @@
 - Why service classes should be stateless
 - KISS, DRY, YAGNI - explain abbreviations
 - DTO vs Command (ps. dto is usually serialized, but command object is not)
-- Sepatation of Concerns
+- Separation of Concerns
 
 ## Tricky questions
 - Does adding a public field in an extended class violate Liskov Substitution principle?
