@@ -37,4 +37,4 @@ Answers are added in a spare time, so I'm sorry if something is missing, I'm wor
 ### Other
 Topics that have not been asked directly on interview, but are highly appreciated at work
 
-* [Clean Code](other/clean-code/list.md)
+* [Clean Code](src/other/clean-code/list.md)
