@@ -32,3 +32,9 @@ Answers are added in a spare time, so I'm sorry if something is missing, I'm wor
 * [DevOps](https://github.com/glaphire/interview_questions_and_answers/blob/main/src/devops/list.md)
 
 * [Microservices](https://github.com/glaphire/interview_questions_and_answers/blob/main/src/microservices/list.md)
+
+
+### Other
+Topics that have not been asked directly on interview, but are highly appreciated at work
+
+* [Clean Code](other/clean-code/list.md)
