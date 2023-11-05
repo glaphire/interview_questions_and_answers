@@ -61,4 +61,4 @@ while ((line = in.readLine()) != null) {
 ```
 12. Nonlocal Information.
 13. Too Much Information.
-14. Inobvious Connection.
+14. Non-obvious Connection.
