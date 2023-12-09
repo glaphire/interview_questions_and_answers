@@ -43,6 +43,8 @@
 - KISS, DRY, YAGNI - explain abbreviations
 - DTO vs Command (ps. dto is usually serialized, but command object is not)
 - Separation of Concerns
+- TDD
+- BDD
 
 ## Tricky questions
 - Does adding a public field in an extended class violate Liskov Substitution principle?
