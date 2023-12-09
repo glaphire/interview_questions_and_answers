@@ -12,7 +12,7 @@
 - MySQL Engines
 - MyISAM vs InnoDB
 
-##Other
+## Other
 - Char vs Varchar
 - What is selectivity
 - ANALYZE vs EXPLAIN commands
@@ -21,7 +21,7 @@
 - Foreign keys - why they are used
 - Locks (pessimistic, optimistic, advisory)
 
-##Pure theoretical questions
+## Pure theoretical questions
 - Join types
 - ACID
 - Isolation levels in transactions
