@@ -10,11 +10,12 @@
 - REST API architecture
 - REST API VS JSON RPC
 - REST API - PUT request specification
-- REST API (HTTP) - POST vs PUT
+- REST API (HTTP) - POST vs PUT vs PATCH
 
 ## HTTP
 - HTTP protocol: request and response structure
 - [HTTP streaming](https://github.com/glaphire/interview_questions_and_answers/blob/main/src/general_questions/answers/http_streaming.md)
+- 4** VS 5** errors 
 
 ## Security
 - OWASP Top 10

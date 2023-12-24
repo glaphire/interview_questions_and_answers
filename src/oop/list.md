@@ -49,3 +49,4 @@
 ## Tricky questions
 - Does adding a public field in an extended class violate Liskov Substitution principle?
 - Does throwing and exception inside method of an extended class violate Liskov Substitution principle?
+- How to guarantee creating valid object? (shortly: create it via constructor)
