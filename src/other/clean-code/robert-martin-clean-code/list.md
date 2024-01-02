@@ -9,3 +9,4 @@
 ## [Chapter 7. Error Handling](chapters/chapter7.md)
 ## [Chapter 8. Boundaries](chapters/chapter8.md)
 ## [Chapter 9. Unit tests](chapters/chapter9.md)
+## [Chapter 10. Classes](chapters/chapter10.md)
