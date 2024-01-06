@@ -13,3 +13,9 @@
 ## [Chapter 11. Systems](chapters/chapter11.md)
 ## [Chapter 12. Emergence](chapters/chapter12.md)
 ## [Chapter 13. Concurrency](chapters/chapter13.md)
+## Chapter 14. Successive Refinement*
+## Chapter 15. JUnit Internals*
+## Chapter 16. SerialDate*
+## [Chapter 17. Smells and Heuristics](chapters/chapter17.md)
+
+\* - skipped intentionally as too specific to Java problems
