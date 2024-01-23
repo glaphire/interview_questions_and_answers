@@ -33,9 +33,10 @@
 ## PHP versions
 - New features in PHP7 (main differences from PHP5)
 - New features in PHP7.4
-- [New features in PHP 8.0](https://github.com/glaphire/interview_questions_and_answers/blob/main/src/php/answers/new_features_in_php80.md)
-- New features in PHP 8.1
+- [New features in PHP 8.0](answers/php_features/new_features_in_php80.md)
+- [New features in PHP 8.1](answers/php_features/new_features_in_php81.md)
 - New features in PHP 8.2
+- New features in PHP 8.3
 
 ## Tools
 - Composer - purpose and possibilities

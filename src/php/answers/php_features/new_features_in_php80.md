@@ -7,7 +7,6 @@
 1. *Named arguments*
 - specifying only required parameters
 - arguments are order-independent and self-documented
-<div><span>
 ```php
 //php7
 htmlspecialchars($string, ENT_COMPAT | ENT_HTML401, 'UTF-8', false);
