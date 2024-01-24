@@ -35,7 +35,7 @@
 - New features in PHP7.4
 - [New features in PHP 8.0](answers/php_features/new_features_in_php80.md)
 - [New features in PHP 8.1](answers/php_features/new_features_in_php81.md)
-- New features in PHP 8.2
+- [New features in PHP 8.2](answers/php_features/new_features_in_php82.md)
 - New features in PHP 8.3
 
 ## Tools
