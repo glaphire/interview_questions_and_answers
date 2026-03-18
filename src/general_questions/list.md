@@ -5,6 +5,7 @@
 - How internet works (request lifecycle from browser request to server response)
 - Concurrency VS Parallelism
 - How JWT authorization works
+- How to expire JWT token when user permissions are updated
 
 ## REST API
 - REST API architecture
