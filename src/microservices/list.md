@@ -7,3 +7,10 @@
 - Canary Release, Blue-Green deployment
 - Orchestration VS Choreography
 - The ways of splitting the monolith
+- Why two-phase commit is not suitable for microservices. Workarounds
+
+### Tricky questions
+1. Design microservice architecture for authorization service.
+Pass metadata along with the login. 
+Describe how to guarantee avoiding duplicate requests to make consistent data for Data Analytics service.
+What to do to avoid data loss.
