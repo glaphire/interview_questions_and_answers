@@ -9,7 +9,7 @@ Answers are added in a spare time, so I'm sorry if something is missing, I'm wor
 
 * [Testing](https://github.com/glaphire/interview_questions_and_answers/blob/main/src/testing/list.md)
 
-* [MySQL](https://github.com/glaphire/interview_questions_and_answers/blob/main/src/mysql/list.md)
+* [Databases](https://github.com/glaphire/interview_questions_and_answers/blob/main/src/databases/list.md)
 
 * [Symfony](https://github.com/glaphire/interview_questions_and_answers/blob/main/src/symfony/list.md)
 
