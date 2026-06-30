@@ -8,6 +8,9 @@
 - Orchestration VS Choreography
 - The ways of splitting the monolith
 - Why two-phase commit is not suitable for microservices. Workarounds
+- Saga pattern
+- Idempotency
+- Service observability (metrics, logging, tracing)
 
 ### Tricky questions
 1. Design microservice architecture for authorization service.
