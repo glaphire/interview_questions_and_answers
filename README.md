@@ -39,3 +39,4 @@ Topics that have not been asked directly on interview, but are highly appreciate
 
 * [Clean Code](src/other/clean-code/list.md)
 * [Debugging](src/other/debugging/list.md)
+* [AI](src/AI/list.md)
