@@ -84,15 +84,13 @@
   a specific, repeatable task.
 - **Hook**: programmable checkpoint or automated script that executes at specific moment in an agent's lifecycle to observe,
   log, modify or block actions.
-
-  <br/>How Hooks work:
+  <br/><br/>How Hooks work:
   - *Triggers* - a defined event in the workflow, such as session startup, right before the prompt is submitted, 
     or after code is generated.
   - *Actions* - a shell command, HTTP endpoint, or fast auxiliary prompt that runs automatically without relying
   on the primary AI decision's making.
   - *Enforcement* - returns an exit code or status that can hard-block unauthorized or risky operations before they execute.
-
-<br/>Common Use Cases:
+  <br/><br/>Common Use Cases:
   - *Security & Compliance*: Running automated vulnerability scans or blocking force-pushes and dangerous commands.
   - *Guardrails and Governance*: acting as programmatic middleware to enforce organizational policies without needing 
     constant human oversight.
