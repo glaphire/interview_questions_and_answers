@@ -48,13 +48,53 @@
   OpenSpec, Kiro.
 
 ### Engineering:
-- **Agentic Engineering**: 
-- **Loop Engineering**:
-- **Prompt Engineering**:
+- **Prompt Engineering**: approach that focuses on crafting the individual input to get a good output. 
+  It's about wording, structure, examples, and instructions within a single prompt (or a few). The unit of work is the message.
+- **Context Engineering**: Approach that focuses on designing what information model sees on each step - curating, structuring
+  and managing the contents of the context window so the model has exactly what it needs to perform.
+  Context engineering asks "what should be in the window at all, and in what form?". The unit of work is the context payload:
+  everything assembled intho the models input for a given call. Context engineering is fully covered under 
+  Claude Code's internals and core architecture.
+- **Loop Engineering**: approach with the focus on *control loop* - the cycle of act -> observe -> act again. The unit 
+  of work is the iteration cycle. The main concern is how model iterates: when loop continues or stops, how errors are
+  caught and retried. Loop engineering is covered by internal agent harness in Claude Code, Codex etc.
+- **Agentic Engineering**: approach of designing a full autonomous system that pursues goal and has minimum human intervention.
+  It covers the loop, tool selection, planning and task decomposition, memory, multiagent coordination, guardrails,
+  and the overall architecture (harness). The unit of work is the whole agent it it's behavior over and extended task.
+  
 
 ### Claude:
-- **Agent**:
-- **Subagent**:
-- **Skill**:
-- **Hook**:
+- **Agent**: autonomous software system that uses AI to pursue goals, make multi-step plans and take actions using 
+  external tools. 
+  <br/>AI agent operates in a continuous loop consisting of three main parts:
+  - *Observe* - the agent collects data from its environment of user instructions and retains context using memory.
+  - *Plan* - it uses a LLM as its brain to break a major goal down into smaller, sequential steps.
+  - *Act* - It uses external tools, databases or APIs to execute the plan, check its results and 
+    adjust its steps until the task is complete.
+- **Subagent**: a specialized, secondary AI instance spawned and directed by a primary orchestrator agent 
+  to handle a specific, bounded subtask within a larger workflow.
+  <br/>Core characteristics:
+  - *Isolated Context Window* - to prevent cluttering main thread with intermediate data;
+  - *Specialized instructions* - Configured with a focused role, custom system prompt and specific goals 
+    (e.g. code review, QA testing) 
+  - *Targeted tool access* - equipped only with the specific tool permissions required for its individual assignment.
+  - *Delegation and synthesis* - executes tasks independently or in parallel, returning only distilled results back 
+    to the parent orchestrator.
+- **Skill**: a modular, reusable package of instructions, tools and workflows that teaches and AI agent how to perform
+  a specific, repeatable task.
+- **Hook**: programmable checkpoint or automated script that executes at specific moment in an agent's lifecycle to observe,
+  log, modify or block actions.
+
+  <br/>How Hooks work:
+  - *Triggers* - a defined event in the workflow, such as session startup, right before the prompt is submitted, 
+    or after code is generated.
+  - *Actions* - a shell command, HTTP endpoint, or fast auxiliary prompt that runs automatically without relying
+  on the primary AI decision's making.
+  - *Enforcement* - returns an exit code or status that can hard-block unauthorized or risky operations before they execute.
+
+<br/>Common Use Cases:
+  - *Security & Compliance*: Running automated vulnerability scans or blocking force-pushes and dangerous commands.
+  - *Guardrails and Governance*: acting as programmatic middleware to enforce organizational policies without needing 
+    constant human oversight.
+  - *Workflow automation*: Triggering auto-formatting, logging audit trails, or enriching context dynamically.
 
